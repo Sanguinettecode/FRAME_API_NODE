@@ -131,7 +131,7 @@ class AppointmentController {
     // Now = 22:42
     if (isBefore(hourPermited, new Date())) {
       return res.status(401).json({
-        error: 'The cancel of appointment does not permitted',
+        error: 'You can only cancel appointment 2 hours in advence.',
       });
     }
     appointment.canceled_at = new Date();

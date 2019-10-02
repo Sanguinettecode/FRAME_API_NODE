@@ -20,10 +20,10 @@ class Database {
   }
 
   mongo() {
-    this.mongoconnection = Mongoose.connect(
-      'mongodb://192.168.99.100:27017/gobarber',
-      { useNewUrlParser: true, useFindAndModify: true }
-    );
+    this.mongoconnection = Mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useFindAndModify: true,
+    });
   }
 }
 

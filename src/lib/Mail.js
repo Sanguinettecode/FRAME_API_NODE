@@ -12,6 +12,7 @@ class Mail {
       port,
       secure,
       auth: auth.user ? auth : null,
+      // Algumas estratégias de envio de email não existem autenticaçãos
     });
 
     this.configuretamplates();
