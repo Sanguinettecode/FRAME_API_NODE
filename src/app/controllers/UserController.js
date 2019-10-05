@@ -34,7 +34,6 @@ class UserController {
       name: Yup.string(),
       email: Yup.string().email(),
       oldpassword: Yup.string()
-        .required()
         .min(6),
       password: Yup.string()
         .min(6)
